@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/ui/phone-mockup";
 import { useTheme } from "next-themes";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
+
 
 export default function Hero() {
   const { theme } = useTheme();

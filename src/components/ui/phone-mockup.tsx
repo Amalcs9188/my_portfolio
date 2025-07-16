@@ -1,5 +1,5 @@
 "use client";
-import image from '../../../public/fe3fee6b-32fa-4c26-b4bd-2d9ad59be1bf.png';
+import image from '../../../public/ChatGPT Image Jul 16, 2025, 03_41_40 PM.png';
 import React, { useEffect, useState } from "react";
 import {
   motion,
