@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/ui/phone-mockup";
 import { useTheme } from "next-themes";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -140,9 +141,10 @@ export default function Hero() {
                 className="relative">
                 <div className="absolute inset-0 -z-10 rounded-full bg-background/50 backdrop-blur-sm"></div>
                 <Button
+
                   variant="outline"
                   className="rounded-full border-primary/20 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:bg-primary/5">
-                  GitHub{" "}
+                  <a href="https://github.com/Amalcs9188">GitHub{" "}</a>
                   <svg
                     className="ml-1 inline size-4"
                     xmlns="http://www.w3.org/2000/svg"

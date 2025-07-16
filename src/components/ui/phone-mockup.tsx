@@ -1,5 +1,5 @@
 "use client";
-import image from '../../../public/WhatsApp Image 2025-07-16 at 15.21.50_e9157642.jpg';
+import image from '../../../public/fe3fee6b-32fa-4c26-b4bd-2d9ad59be1bf.png';
 import React, { useEffect, useState } from "react";
 import {
   motion,
