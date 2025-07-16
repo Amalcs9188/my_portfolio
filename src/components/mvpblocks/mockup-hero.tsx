@@ -62,7 +62,7 @@ export default function Hero() {
   return (
     <div
       ref={heroRef}
-      className="relative min-h-screen w-full overflow-hidden bg-background py-16">
+      className="relative min-h-screen  w-full overflow-hidden bg-background py-16">
       <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(229,62,62,0.2),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(229,62,62,0.15),rgba(30,30,40,0))]"></div>
 
@@ -98,7 +98,7 @@ export default function Hero() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}>
-              <h2 className="mb-6 text-2xl font-bold leading-tight tracking-tight text-foreground md:text-3xl lg:text-5xl">
+              <h2 className="mb-6 py-6 md:py-0 lg:mt-0 text-2xl font-bold leading-tight tracking-tight text-foreground md:text-3xl lg:text-5xl">
                 Full Stack Developer.<GradientText>UI Architect.</GradientText>{" "}
                 and <GradientText>API</GradientText>Alchemist
               </h2>
