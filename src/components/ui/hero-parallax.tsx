@@ -13,14 +13,15 @@ import { GradientText } from "../gradinetText";
 import { Button } from "./button";
 import { Sparkles } from "lucide-react";
 import { MotionButtons } from "../motionButton";
+import { Product } from "@/app/main-2/page";
 
 export const HeroParallax = ({
   products,
 }: {
   products: {
-    title: string;
-    link: string;
-    thumbnail: string;
+    title?: string;
+    link?: string;
+    thumbnail?: string;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -84,7 +85,7 @@ export const HeroParallax = ({
         }}
         className="">
         <motion.div className="flex flex-row-reverse mb-20 space-x-20 space-x-reverse">
-          {firstRow.map((product) => (
+          {firstRow?.map((product) => (
             <ProductCard
               product={product}
               translate={translateX}
@@ -154,11 +155,7 @@ export const ProductCard = ({
   product,
   translate,
 }: {
-  product: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  };
+  product?: Product
   translate: MotionValue<number>;
 }) => {
   return (
@@ -169,20 +166,20 @@ export const ProductCard = ({
       whileHover={{
         y: -20,
       }}
-      key={product.title}
+      key={product?.title}
       className="group/product h-96 w-[30rem] relative shrink-0">
-      <a href={product.link} className="block group-hover/product:shadow-2xl ">
+      <a href={product?.link} className="block group-hover/product:shadow-2xl ">
         <img
-          src={product.thumbnail}
+          src={product?.thumbnail}
           height="600"
           width="600"
           className="absolute inset-0 object-cover object-left-top w-full h-full"
-          alt={product.title}
+          alt={product?.title}
         />
       </a>
       <div className="absolute inset-0 w-full h-full bg-black opacity-0 pointer-events-none group-hover/product:opacity-80"></div>
       <h2 className="absolute text-white opacity-0 bottom-4 left-4 group-hover/product:opacity-100">
-        {product.title}
+        {product?.title}
       </h2>
     </motion.div>
   );
