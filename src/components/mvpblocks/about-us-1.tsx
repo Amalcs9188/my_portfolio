@@ -69,7 +69,7 @@ export default function AboutUs1() {
   const aboutData = {
     title: 'About Me',
     subtitle:
-      'Full Stack Developer crafting scalable backends and beautiful UIs with React, Next.js, and .NET, Node Js, Express  Focused on clean code, performance, and developer-first solutions.',
+    ' Full Stack Developer building scalable backends and elegant UIs with React, Next.js, Node.js, and .NET.Focused on clean code, performance, and developer-first solutions',
     mission:
       'My mission is to empower businesses and creators by building high-performance, user-friendly web applications using modern full stack technologies. I strive to deliver clean, scalable code and intuitive interfaces that make a real impact',
     vision:
@@ -134,7 +134,7 @@ export default function AboutUs1() {
 
               <div className="space-y-4">
                 <h2 className="mb-4 bg-gradient-to-r from-primary/90 to-primary/70 bg-clip-text text-3xl font-bold text-transparent">
-                  Our Mission
+                  My Mission
                 </h2>
 
                 <p className="text-lg leading-relaxed text-muted-foreground">
@@ -158,7 +158,7 @@ export default function AboutUs1() {
               </div>
 
               <h2 className="mb-4 bg-gradient-to-r from-blue-500/90 to-blue-500/70 bg-clip-text text-3xl font-bold text-transparent">
-                Our Vision
+                My Vision
               </h2>
 
               <p className="text-lg leading-relaxed text-muted-foreground">
@@ -166,64 +166,6 @@ export default function AboutUs1() {
               </p>
             </motion.div>
           </motion.div>
-        </div>
-
-        <div ref={valuesRef} className="mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-            }
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="mb-12 text-center"
-          >
-            <h2 className="bg-gradient-to-r from-foreground/80 via-foreground to-foreground/80 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
-              Our Core Values
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              The principles that guide everything we do and every decision we
-              make.
-            </p>
-          </motion.div>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {aboutData.values?.map((value, index) => {
-              const IconComponent = iconComponents[value.icon];
-
-              return (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={
-                    valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                  }
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.1 + 0.2,
-                    ease: 'easeOut',
-                  }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                >
-                  <CardHoverEffect
-                    icon={<IconComponent className="h-6 w-6" />}
-                    title={value.title}
-                    description={value.description}
-                    variant={
-                      index === 0
-                        ? 'purple'
-                        : index === 1
-                          ? 'blue'
-                          : index === 2
-                            ? 'amber'
-                            : 'rose'
-                    }
-                    glowEffect={true}
-                    size="lg"
-                  />
-                </motion.div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
