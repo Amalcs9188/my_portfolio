@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button"; 
+import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 
 export function MotionButtons() {
@@ -16,17 +16,27 @@ export function MotionButtons() {
       transition={{ delay: 0.4, duration: 0.6 }}
       className="flex flex-wrap items-center justify-center gap-4 mt-4 md:justify-start"
     >
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <Button className="relative flex rounded-full ation-300 itetransition-transform">
+      {/* Project Button */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="transition-transform duration-300 transform"
+      >
+        <Button className="rounded-full">
           Explore My Projects
           <Sparkles className="w-4 h-4 ml-2" />
         </Button>
       </motion.div>
 
-      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+      {/* GitHub Button */}
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="transition-transform duration-300 transform"
+      >
         <Button
           variant="outline"
-          className="transition-all duration-300 rounded-full border-primary/20 backdrop-blur-sm hover:border-primary/30 hover:bg-primary/5"
+          className="rounded-full border-primary/20 backdrop-blur-sm hover:border-primary/30 hover:bg-primary/5"
         >
           <a
             href="https://github.com/Amalcs9188"

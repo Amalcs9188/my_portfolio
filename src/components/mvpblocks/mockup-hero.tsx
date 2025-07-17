@@ -14,7 +14,8 @@ import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/ui/phone-mockup";
 import { useTheme } from "next-themes";
 import { ArrowRight, Sparkles } from "lucide-react";
-
+import { MotionButtons } from "../motionButton";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 export default function Hero() {
   const { theme } = useTheme();
@@ -100,8 +101,10 @@ export default function Hero() {
                 visible: { opacity: 1, y: 0 },
               }}>
               <h2 className="py-6 mb-6 text-2xl font-bold leading-tight tracking-tight md:py-0 lg:mt-0 text-foreground md:text-3xl lg:text-5xl">
-                Full Stack Developer.<GradientText>UI Architect.</GradientText>{" "}
-                and <GradientText>API</GradientText>Alchemist
+                Full Stack <GradientText> Developer.</GradientText>
+                <br />
+                API <GradientText>Alchemist</GradientText>
+                <br /> UI <GradientText>Architect.</GradientText>{" "}
               </h2>
             </motion.div>
 
@@ -111,15 +114,15 @@ export default function Hero() {
                 visible: { opacity: 1, y: 0 },
               }}
               className="mb-8 text-lg leading-relaxed text-muted-foreground">
-              The future is a blend of intelligence and decentralization. LU-cy
-              connects AI tools with Web3 infrastructure, giving developers the
-              power to build beyond limits. One platform.{" "}
-              <span className="font-semibold text-foreground">
-                Endless potential.
-              </span>
+              The future is a blend of intelligence and decentralization — and I
+              m building right at that intersection. As a developer
+              <span className="font-semibold text-foreground"> passionate </span>
+              about both front-end aesthetics and back-end efficiency, I craft
+              seamless digital experiences from concept to code. With a deep
+              focus on design systems, scalable APIs, and emerging technologies,
+              I <span className="font-semibold text-foreground"> architect </span>   intelligent interfaces that perform.
             </motion.p>
-
-
+              
             <motion.div
               variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
               className="flex flex-wrap justify-center gap-3 mt-10 md:justify-start">

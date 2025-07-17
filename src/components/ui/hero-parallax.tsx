@@ -122,14 +122,16 @@ export const Header = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative top-0 left-0 w-full px-4 py-20 mx-auto max-w-7xl md:py-40">
+      className="relative top-0 left-0 w-full px-4 py-20 mx-auto max-w-7xl md:py-40"
+    >
       <motion.h1
         variants={{
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 0.6 }}
-        className="text-2xl font-bold md:text-7xl dark:text-white">
+        className="text-2xl font-bold md:text-7xl dark:text-white"
+      >
         Turning Ideas into Beautiful, <br />{" "}
         <GradientText>Functional Websites</GradientText>
       </motion.h1>
@@ -140,16 +142,21 @@ export const Header = () => {
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        className="max-w-2xl mt-8 text-base md:text-xl dark:text-neutral-200">
+        className="max-w-2xl mt-8 text-base md:text-xl dark:text-neutral-200"
+      >
         I craft responsive, user-friendly web applications using the latest
         technologies. With a passion for design and code, I help bring your
         digital vision to life.
       </motion.p>
 
-      <MotionButtons/>
+      {/* 💡 Move this OUTSIDE the rotating container */}
+      <div className="relative z-10">
+        <MotionButtons />
+      </div>
     </motion.div>
   );
 };
+
 
 export const ProductCard = ({
   product,
