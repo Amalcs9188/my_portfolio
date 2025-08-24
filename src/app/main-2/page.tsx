@@ -2,6 +2,7 @@ import AboutUs1 from "@/components/mvpblocks/about-us-1";
 import Hero from "@/components/mvpblocks/mockup-hero";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import React from "react";
+import { AnimatedTestimonials } from './../../components/ui/animated-testimonials';
 
 export interface Product {
   title?: string;
@@ -94,6 +95,7 @@ function page() {
       <div>
         <HeroParallax products={products}/>
         <Hero />
+        <AnimatedTestimonials />
       </div>
     </>
   );
